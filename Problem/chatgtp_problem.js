@@ -1,21 +1,22 @@
 //Print all prime numbers between 1 and N.
 
-
-const N = 51;
-let isPrime = true;
+const N = 10;
 
 if(N===1){
-    isPrime = false;
+    return;
 }else{
-    for(let i =2; i<=Math.sqrt(N); i++){
-        if(N%i===0){
-            isPrime = false;
+    for(let i=2; i<=N; i++){
+        let isPrime = true;
+
+        for(let j=2; j<= Math.sqrt(i); j++){
+            if(i%j===0){
+                isPrime = false;
+                break;
+            }
+        }
+
+        if(isPrime){
+            console.log(i);
         }
     }
-}
-
-if(isPrime){
-    console.log(`${N} is a Prime number.`);
-}else{
-    console.log(`${N} is not a Prime number.`);
 }
