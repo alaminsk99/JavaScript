@@ -1,16 +1,20 @@
-//Sum of digits of a number.
+// Armstrong number check.
 
+// ------------->   153 = 1^3+5^3+3^3 = 153
 
-// ----> 136= 1+3+6=10
+const Num = 370;
+let N = Num;
+let sum = 0;
 
-const num = 73264356323;
-let N = num;
-let sum =0;
 
 while(N !=0){
     let digit = N%10;
-    sum = sum+digit;
-    N = Math.floor(N/10);                   
+    sum = sum + digit*digit*digit;
+    N= Math.floor(N/10);
 }
 
-console.log(`The Sum of digit of ${num} is ${sum}`);
+if(Num===sum){
+    console.log(`${Num} is Armstrong number.`);
+}else{
+    console.log(`${Num} is not Armstrong number.`);
+}
