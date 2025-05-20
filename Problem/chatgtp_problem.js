@@ -1,20 +1,19 @@
-// Armstrong number check.
+// Perfect number check.
 
-// ------------->   153 = 1^3+5^3+3^3 = 153
+// ------------->   6 = 1+2+3 = 6
 
-const Num = 370;
+const Num = 496;
 let N = Num;
 let sum = 0;
 
-
-while(N !=0){
-    let digit = N%10;
-    sum = sum + digit*digit*digit;
-    N= Math.floor(N/10);
+for(let i =1; i<N; i++){
+    if(N%i===0){
+        sum = sum + i;
+    }
 }
 
 if(Num===sum){
-    console.log(`${Num} is Armstrong number.`);
+    console.log(`${Num} is Perfect number.`);
 }else{
-    console.log(`${Num} is not Armstrong number.`);
+    console.log(`${Num} is not Perfect number.`);
 }
