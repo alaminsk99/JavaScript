@@ -1,19 +1,34 @@
-// Perfect number check.
+//Check if a number is a strong number.
+/*
+A strong number is a number whose sum of the factorials of its digits equals the original number. 
+For example, 145 is a strong number because 1! + 4! + 5! = 1 + 24 + 120 = 145. 
+To check if a number is strong, you need to calculate the factorial of each digit,
+sum them up, and compare the result with the original number. 
+*/
 
-// ------------->   6 = 1+2+3 = 6
 
-const Num = 496;
-let N = Num;
-let sum = 0;
+const num = 145;
+let n = num;
+let sum =0;
 
-for(let i =1; i<N; i++){
-    if(N%i===0){
-        sum = sum + i;
+function factorial(num){
+    if (num === 0 || num === 1) {
+        return 1;
     }
+    return num*factorial(num-1);
 }
 
-if(Num===sum){
-    console.log(`${Num} is Perfect number.`);
+
+while(n !=0){
+    let digit = n%10;
+    sum = sum + factorial(digit);
+
+    n = Math.floor(n/10);
+}
+
+
+if(sum === num ){
+    console.log(`${num} is the Strong number.`);
 }else{
-    console.log(`${Num} is not Perfect number.`);
+     console.log(`${num} is not the Strong number.`);
 }
