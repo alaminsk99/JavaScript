@@ -1,34 +1,25 @@
-//Pattern problem of pyramid
+//  Number Triangle
+
+
 /*
+1
+12
+123
+1234
+12345
+ 
 
 
-    *                       --> star = 1 , sp = 4             { sp= 5-i and star (2*i-1)    }
-   ***                      --> star = 3,  sp = 3 
-  *****                     --> star = 5,  sp = 2,
- *******                    --> star = 7,  sp = 1,
-*********                   --> star = 9,  sp = 0
+ */
 
 
+let number = "";
 
-
-*/
-
-
-
-let pattern = "";
-
-
-for(let i = 1; i<=5; i++){
-    // Spaces
-
-    for(let j=1; j<= (5-i); j++){
-        pattern += " ";
+for(let i =1; i<=5; i++){
+    for(let j =1; j<= i; j++){
+        number = number+ `${j}`
     }
-    for(let k = 1;k<=(2*i-1); k++){
-        pattern += "*";
-    }
-    pattern +="\n";
+    number += "\n";
 }
 
-
-console.log(`${pattern}`)
+console.log(`${number}`)
