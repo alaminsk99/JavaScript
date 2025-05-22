@@ -1,25 +1,50 @@
-//  Number Triangle
+// Diamond
+
+
 
 
 /*
-1
-12
-123
-1234
-12345
+    *
+   ***
+  *****    
+   ***
+    *
+
  
 
 
  */
 
 
-let number = "";
+let pattern = "";
+const rows = 3;
 
-for(let i =1; i<=5; i++){
-    for(let j =1; j<= i; j++){
-        number = number+ `${j}`
+
+
+/// Top
+for(let i =1; i<=rows; i++){
+    /// for spaces
+    for(let j =1; j<= (rows-i); j++){
+        pattern += " ";
     }
-    number += "\n";
+    /// for star
+    for(let k=1; k<=(2*i-1); k++){
+        pattern += "*";
+    }
+    pattern += "\n";
+}
+/// Bottom
+for (let i = rows - 1; i >= 1; i--) {
+  // Spaces
+  for (let j = 1; j <= rows - i; j++) {
+    pattern += " ";
+  }
+  // Stars
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    pattern += "*";
+  }
+  pattern += "\n";
 }
 
-console.log(`${number}`)
+
+console.log(`${pattern}`)
