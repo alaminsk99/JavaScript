@@ -1,20 +1,11 @@
-// Create a function using the "function" keyword that takes a string as a argument and return the number of vowels in the string.
+// Print Square of array number.
 
 
+let arr = [3,4,5];
 
+/// Print the sqaure of Array values.
 
-
-function numberOFVowels(later){
-    let inx =0;
-    for(let char of later){
-         if(char==="a"|| char==="e"|| char==="i"||char==="o"||char==="u"){
-            inx++
-        }
-    }
-    return inx;
-}
-
-
-let word = numberOFVowels("Alamin is a bad boy.".toLowerCase());
-
-console.log(word);
+arr.forEach((val)=>{
+    let sq = val*val;
+    console.log(sq);
+});
