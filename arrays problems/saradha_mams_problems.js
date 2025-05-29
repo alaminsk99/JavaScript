@@ -1,18 +1,24 @@
-//Find the average of elements in an array.
+//Count even and odd numbers in an array.
 
 
 
 
 
 
-let arr =[3,5,45,5,67,78];
+let arr =[3,5,45,5,67,78,34,4];
 
-let sum = 0;
+let oddCount = 0;
+let evenCount =0;
 for(let i =0; i<arr.length; i++){
-    sum += arr[i];
+   if(arr[i]%2===0){
+    evenCount++;
+    
+   }else{
+    oddCount++
+   }
 }
 
-let avg = sum/arr.length;
 
 
-console.log(`Average of the array is: ${avg}`);
+
+console.log(`Even number is: ${evenCount} and Odd Count is : ${oddCount}`);
