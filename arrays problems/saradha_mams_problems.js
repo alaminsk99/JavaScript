@@ -1,4 +1,4 @@
-//Count even and odd numbers in an array.
+//Search for an element in an array (linear search).
 
 
 
@@ -7,18 +7,19 @@
 
 let arr =[3,5,45,5,67,78,34,4];
 
-let oddCount = 0;
-let evenCount =0;
-for(let i =0; i<arr.length; i++){
-   if(arr[i]%2===0){
-    evenCount++;
-    
-   }else{
-    oddCount++
-   }
+let target = 5;
+
+let isFound = false;
+
+for(let i =0; i< arr.length; i++){
+    if(arr[i]===target){
+        console.log(`Element ${target} found at index ${i}`)
+        isFound = true;
+        break;
+    }
 }
 
+if(!isFound){
+    console.log(`Element ${target} not found in the array`);
+}
 
-
-
-console.log(`Even number is: ${evenCount} and Odd Count is : ${oddCount}`);
