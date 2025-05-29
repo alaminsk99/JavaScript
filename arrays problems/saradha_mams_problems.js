@@ -1,23 +1,24 @@
-//Calculate the sum of all elements in an array.
+//Reverse an array.
 
 
 
 
-let arr =[3,1,3];
 
 
+let arr =[3,1,5, 4,5];
 
-let sum = 0;
+/// For the reverse array
+//arr.reverse()
 
 
+/// Using the swap method
 
-for(let i =0; i< arr.length;i++){
-    
-    sum += arr[i];
+for(let i =0; i< Math.floor(arr.length/2); i++){
+    let temp = arr[i];
+    arr[i]= arr[arr.length -1 -i];
+    console.log(temp)
+    arr[arr.length -1 - i] = temp;
 }
 
 
-let sums = arr.reduce((acc, curr)=> acc+curr,0);
-
-
-console.log(`Sum of the array elements: ${sums}`);
+console.log(arr);
